@@ -2,143 +2,132 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Bank of America - Funds Transfer Confirmation</title>
+  <title>High-Value Transfer Receipt - Bank of America</title>
   <style>
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #eaeef1;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #f0f2f5;
       padding: 40px;
     }
-    .statement-container {
-      max-width: 420px;
+    .receipt-container {
+      max-width: 700px;
       margin: auto;
-      background: #dfd6d6;
-      padding: 32px 28px 24px 28px;
-      border-radius: 14px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-      border: 1px solid #e2e2e2;
+      background: #fff;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border: 1px solid #ddd;
     }
-    .boa-logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 24px;
-    }
-    .boa-logo-text {
-      font-size: 1.35em;
-      font-weight: 700;
-      letter-spacing: 2px;
-    }
-    .boa-logo-icon {
-      font-weight: 900;
-      color: #d4001a;
-      font-size: 1.7em;
-      transform: translateY(-2px);
-    }
-    .title {
-      font-size: 1.1em;
-      font-weight: bold;
-      margin-bottom: 18px;
-      letter-spacing: 0.5px;
-    }
-    hr {
-      border: none;
-      border-top: 1.3px solid #ddd;
-      margin: 12px 0 18px 0;
-    }
-    .section-label {
-      font-weight: 600;
-      margin-top: 14px;
-      margin-bottom: 6px;
-    }
-    .details-table {
-      width: 100%;
-      font-size: 0.97em;
-      border-collapse: collapse;
-    }
-    .details-table td {
-      padding: 3px 0;
-    }
-    .amount-row td {
-      font-weight: bold;
-      font-size: 1.08em;
-      padding-top: 6px;
-    }
-    .footer-balance {
-      margin-top: 24px;
-      font-size: 1em;
-      font-weight: bold;
-      display: flex;
-      justify-content: space-between;
-    }
-    .note {
-      font-size: 0.9em;
-      color: #888;
-      margin-top: 24px;
+    .header {
       text-align: center;
+      margin-bottom: 30px;
+    }
+    .header h1 {
+      margin: 0;
+      color: #d4001a;
+      font-size: 1.6em;
+    }
+    .header h2 {
+      margin: 5px 0;
+      font-size: 1.1em;
+      color: #555;
+    }
+    .section {
+      margin-bottom: 22px;
+    }
+    .section-title {
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+    .details {
+      font-size: 0.96em;
+      line-height: 1.6;
+    }
+    .details strong {
+      display: inline-block;
+      width: 160px;
+      font-weight: 600;
+    }
+    .footer {
+      font-size: 0.9em;
+      margin-top: 32px;
+      color: #666;
+      border-top: 1px solid #ccc;
+      padding-top: 16px;
+      text-align: center;
+    }
+    .auth-sign {
+      margin-top: 24px;
+      font-size: 0.95em;
+    }
+    .auth-sign div {
+      margin-bottom: 6px;
     }
   </style>
 </head>
 <body>
-  <div class="statement-container">
-    <div class="boa-logo">
-      <span class="boa-logo-text">BANK OF AMERICA</span>
-      <span class="boa-logo-icon">≡</span>
+  <div class="receipt-container">
+    <div class="header">
+      <h1>Bank of America – Treasury Services</h1>
+      <h2>High-Value Funds Transfer Confirmation</h2>
     </div>
-    <div class="title">FUNDS TRANSFER CONFIRMATION</div>
-    <hr>
-    <table class="details-table">
-      <tr>
-        <td>Date:</td>
-        <td>08/06/2025</td>
-      </tr>
-      <tr>
-        <td>Time:</td>
-        <td>02:00 PM</td>
-      </tr>
-      <tr>
-        <td>Reference No.</td>
-        <td>20250608TRF529554</td>
-      </tr>
-    </table>
-    <hr>
-    <div class="section-label">From Account</div>
-    <table class="details-table">
-      <tr>
-        <td>Name</td>
-        <td>private inc</td>
-      </tr>
-      <tr>
-        <td>Account Nu.</td>
-        <td>****1242</td>
-      </tr>
-      <tr>
-        <td>Account Type</td>
-        <td>Checking</td>
-      </tr>
-    </table>
-    <hr>
-    <table class="details-table">
-      <tr class="amount-row">
-        <td>Amount</td>
-        <td>$10,500,000.00</td>
-      </tr>
-      <tr>
-        <td>Transfer Type</td>
-        <td>Internal Transfer</td>
-      </tr>
-      <tr>
-        <td>Memo</td>
-        <td>investments proceeds</td>
-      </tr>
-      <tr>
-        <td>Status</td>
-        <td>Completed</td>
-      </tr>
-    </table>
-   
-    <div class="note">
-      This is an automated transfer receipt. Please keep for your records.
+
+    <div class="section">
+      <div class="section-title">Transaction Details</div>
+      <div class="details">
+        <div><strong>Date:</strong> 08/06/2025</div>
+        <div><strong>Time:</strong> 10:02 AM EST</div>
+        <div><strong>Reference Number:</strong> HVT20250608TXR120001X</div>
+        <div><strong>Transaction ID:</strong> BOA-X1003-2025-06-08-002</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">From Account</div>
+      <div class="details">
+        <div><strong>Account Name:</strong> Donald ivst Holdings Inc.</div>
+        <div><strong>Account Number:</strong> ****8901</div>
+        <div><strong>SWIFT Code:</strong> BOFAUS3N</div>
+        <div><strong>IBAN:</strong> US64BOFA00000089066874367</div>
+        <div><strong>Account Type:</strong> Corporate Treasury USD</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Beneficiary Details</div>
+      <div class="details">
+        <div><strong>Name:</strong> Karen Janet Korecki</div>
+        <div><strong>Bank:</strong> TD Canada Trust.</div>
+        <div><strong>Account Number:</strong> ****0486</div>
+        <div><strong>SWIFT Code:</strong> CHASUS33</div>
+        <div><strong>IBAN:</strong> US22CHAS0000099120000023</div>
+        <div><strong>Country:</strong> United States</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Transfer Information</div>
+      <div class="details">
+        <div><strong>Amount:</strong> <span style="color: green; font-weight: bold;">$10,000,000,000.00 USD</span></div>
+        <div><strong>Transfer Type:</strong> Domestic Interbank Transfer</div>
+        <div><strong>Purpose Code:</strong> INF010 – Infrastructure Capital Injection</div>
+        <div><strong>Memo:</strong> Phase 2 Capital Commitment</div>
+        <div><strong>Status:</strong> ✅ Completed</div>
+      </div>
+    </div>
+
+    <div class="auth-sign">
+      <div><strong>Authorized By:</strong></div>
+    
+      <div>Name:Donald J Trump – president, United States Of America.</div>
+      
+    </div>
+
+    <div class="footer">
+      This transaction complies with all applicable U.S. and international anti-money laundering regulations. A confirmation copy has been securely archived.
     </div>
   </div>
 </body>
