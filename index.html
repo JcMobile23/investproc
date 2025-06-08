@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bank of America - Funds Transfer Confirmation</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #eaeef1;
+      padding: 40px;
+    }
+    .statement-container {
+      max-width: 420px;
+      margin: auto;
+      background: #dfd6d6;
+      padding: 32px 28px 24px 28px;
+      border-radius: 14px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      border: 1px solid #e2e2e2;
+    }
+    .boa-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .boa-logo-text {
+      font-size: 1.35em;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    .boa-logo-icon {
+      font-weight: 900;
+      color: #d4001a;
+      font-size: 1.7em;
+      transform: translateY(-2px);
+    }
+    .title {
+      font-size: 1.1em;
+      font-weight: bold;
+      margin-bottom: 18px;
+      letter-spacing: 0.5px;
+    }
+    hr {
+      border: none;
+      border-top: 1.3px solid #ddd;
+      margin: 12px 0 18px 0;
+    }
+    .section-label {
+      font-weight: 600;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+    .details-table {
+      width: 100%;
+      font-size: 0.97em;
+      border-collapse: collapse;
+    }
+    .details-table td {
+      padding: 3px 0;
+    }
+    .amount-row td {
+      font-weight: bold;
+      font-size: 1.08em;
+      padding-top: 6px;
+    }
+    .footer-balance {
+      margin-top: 24px;
+      font-size: 1em;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+    }
+    .note {
+      font-size: 0.9em;
+      color: #888;
+      margin-top: 24px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="statement-container">
+    <div class="boa-logo">
+      <span class="boa-logo-text">BANK OF AMERICA</span>
+      <span class="boa-logo-icon">≡</span>
+    </div>
+    <div class="title">FUNDS TRANSFER CONFIRMATION</div>
+    <hr>
+    <table class="details-table">
+      <tr>
+        <td>Date:</td>
+        <td>08/06/2025</td>
+      </tr>
+      <tr>
+        <td>Time:</td>
+        <td>02:00 PM</td>
+      </tr>
+      <tr>
+        <td>Reference No.</td>
+        <td>20250608TRF529554</td>
+      </tr>
+    </table>
+    <hr>
+    <div class="section-label">From Account</div>
+    <table class="details-table">
+      <tr>
+        <td>Name</td>
+        <td>private inc</td>
+      </tr>
+      <tr>
+        <td>Account Nu.</td>
+        <td>****1242</td>
+      </tr>
+      <tr>
+        <td>Account Type</td>
+        <td>Checking</td>
+      </tr>
+    </table>
+    <hr>
+    <table class="details-table">
+      <tr class="amount-row">
+        <td>Amount</td>
+        <td>$1,500.00</td>
+      </tr>
+      <tr>
+        <td>Transfer Type</td>
+        <td>Internal Transfer</td>
+      </tr>
+      <tr>
+        <td>Memo</td>
+        <td>investments proceeds</td>
+      </tr>
+      <tr>
+        <td>Status</td>
+        <td>Completed</td>
+      </tr>
+    </table>
+    <hr>
+    <div class="footer-balance">
+      <span>Available Balance</span>
+      <span>3,253.75</span>
+    </div>
+    <div class="note">
+      This is an automated transfer receipt. Please keep for your records.
+    </div>
+  </div>
+</body>
+</html>
