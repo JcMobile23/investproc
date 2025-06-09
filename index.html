@@ -9,6 +9,19 @@
       background: #f0f2f5;
       padding: 40px;
     }
+    #loader {
+      text-align: center;
+      margin-top: 120px;
+      font-size: 1.5em;
+    }
+    #loading-indicator {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #555;
+    }
+    #main-content {
+      display: none;
+    }
     .receipt-container {
       max-width: 700px;
       margin: auto;
@@ -66,102 +79,114 @@
     .auth-sign div {
       margin-bottom: 6px;
     }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+      margin: 20px 0;
+    }
+    .image-grid img {
+      width: 100%;
+      max-width: 220px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      object-fit: cover;
+      background: #fafafa;
+      padding: 4px;
+      box-sizing: border-box;
+    }
   </style>
 </head>
 <body>
-  <div class="receipt-container">
-    <div class="header">
-      <h1>Bank of America – Treasury Services</h1>
-      <h2>High-Value Funds Transfer Confirmation</h2>
-    </div>
-
-    <div class="section">
-      <div class="section-title">Transaction Details</div>
-      <div class="details">
-        <div><strong>Date:</strong> 08/06/2025</div>
-        <div><strong>Time:</strong> 10:02 AM EST</div>
-        <div><strong>Reference Number:</strong> HVT20250608TXR120001X</div>
-        <div><strong>Transaction ID:</strong> BOA-X1003-2025-06-08-002</div>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-title">From Account</div>
-      <div class="details">
-        <div><strong>Account Name:</strong> Donald ivst Holdings Inc.</div>
-        <div><strong>Account Number:</strong> ****8901</div>
-        <div><strong>SWIFT Code:</strong> BOFAUS3N</div>
-        <div><strong>IBAN:</strong> US64BOFA00000089066874367</div>
-        <div><strong>Account Type:</strong> Corporate Treasury USD</div>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-title">Beneficiary Details</div>
-      <div class="details">
-        <div><strong>Name:</strong> Karen Janet Korecki</div>
-        <div><strong>Bank:</strong> TD Canada Trust.</div>
-        <div><strong>Account Number:</strong> ****0486</div>
-        <div><strong>SWIFT Code:</strong> TDOMCATTTOR</div>
-        <div><strong>IBAN:</strong> US22CHAS0000099120000023</div>
-        <div><strong>Country:</strong> United States</div>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-title">Transfer Information</div>
-      <div class="details">
-        <div><strong>Amount:</strong> <span style="color: green; font-weight: bold;">$10,000,000,000.00 USD</span></div>
-        <div><strong>Transfer Type:</strong> Domestic Interbank Transfer</div>
-        <div><strong>Purpose Code:</strong> INF010 – Infrastructure Capital Injection</div>
-        <div><strong>Memo:</strong>  John shares payment from elon musk company </div>
-      <div>
-  <strong>Status:</strong> ⏳ Pending<br>
-  <em>Reason:</em> On hold till the fine of the $250,000 is paid in bitcoin
-</div>
-      </div>
-    </div>
-
-    <div class="auth-sign">
-      <div><strong>Authorized By:</strong></div>
-    
-      <div>Name:Donald J Trump – president, United States Of America.</div>
-      
-    </div>
-<div class="section">
-  <div class="section-title">Supporting Images</div>
-  <div class="image-grid">
-    <img src="WhatsApp%20Image%202025-06-09%20at%208.56.39%20AM.jpeg" alt="Supporting Image 1">
-    <img src="WhatsApp%20Image%202025-06-09%20at%208.56.40%20AM.jpeg" alt="Supporting Image 2">
-    <img src="WhatsApp%20Image%202025-06-09%20at%208.56.41%20AM.jpeg" alt="Supporting Image 3">
-    <img src="WhatsApp%20Image%202025-06-09%20at%208.56.42%20AM.jpeg" alt="Supporting Image 4">
-    <img src="WhatsApp%20Image%202025-06-09%20at%208.56.43%20AM.jpeg" alt="Supporting Image 5">
-    <img src="WhatsApp%20Image%202025-06-09%20at%208.56.44%20AM.jpeg" alt="Supporting Image 6">
-    <img src="WhatsApp%20Image%202025-06-09%20at%208.56.45%20AM.jpeg" alt="Supporting Image 7">
+  <!-- Loader -->
+  <div id="loader">
+    <div>Welcome to Investproc! Please wait...</div>
+    <div id="loading-indicator">Loading...</div>
   </div>
-</div>
 
-<style>
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 18px;
-  margin: 20px 0;
-}
-.image-grid img {
-  width: 100%;
-  max-width: 220px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  object-fit: cover;
-  background: #fafafa;
-  padding: 4px;
-  box-sizing: border-box;
-}
-</style>
-    <div class="footer">
-      This transaction complies with all applicable U.S. and international anti-money laundering regulations. A confirmation copy has been securely archived.
+  <!-- Main content hidden initially -->
+  <div id="main-content">
+    <div class="receipt-container">
+      <div class="header">
+        <h1>Bank of America – Treasury Services</h1>
+        <h2>High-Value Funds Transfer Confirmation</h2>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Transaction Details</div>
+        <div class="details">
+          <div><strong>Date:</strong> 08/06/2025</div>
+          <div><strong>Time:</strong> 10:02 AM EST</div>
+          <div><strong>Reference Number:</strong> HVT20250608TXR120001X</div>
+          <div><strong>Transaction ID:</strong> BOA-X1003-2025-06-08-002</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">From Account</div>
+        <div class="details">
+          <div><strong>Account Name:</strong> Donald ivst Holdings Inc.</div>
+          <div><strong>Account Number:</strong> ****8901</div>
+          <div><strong>SWIFT Code:</strong> BOFAUS3N</div>
+          <div><strong>IBAN:</strong> US64BOFA00000089066874367</div>
+          <div><strong>Account Type:</strong> Corporate Treasury USD</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Beneficiary Details</div>
+        <div class="details">
+          <div><strong>Name:</strong> Karen Janet Korecki</div>
+          <div><strong>Bank:</strong> TD Canada Trust.</div>
+          <div><strong>Account Number:</strong> ****0486</div>
+          <div><strong>SWIFT Code:</strong> TDOMCATTTOR</div>
+          <div><strong>IBAN:</strong> US22CHAS0000099120000023</div>
+          <div><strong>Country:</strong> United States</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Transfer Information</div>
+        <div class="details">
+          <div><strong>Amount:</strong> <span style="color: green; font-weight: bold;">$10,000,000,000.00 USD</span></div>
+          <div><strong>Transfer Type:</strong> Domestic Interbank Transfer</div>
+          <div><strong>Purpose Code:</strong> INF010 – Infrastructure Capital Injection</div>
+          <div><strong>Memo:</strong>  John shares payment from elon musk company </div>
+          <div>
+            <strong>Status:</strong> ⏳ Pending<br>
+            <em>Reason:</em> On hold till the fine of the $250,000 is paid in bitcoin
+          </div>
+        </div>
+      </div>
+
+      <div class="auth-sign">
+        <div><strong>Authorized By:</strong></div>
+        <div>Name:Donald J Trump – president, United States Of America.</div>
+      </div>
+      <div class="section">
+        <div class="section-title">Supporting Images</div>
+        <div class="image-grid">
+          <img src="WhatsApp%20Image%202025-06-09%20at%208.56.39%20AM.jpeg" alt="Supporting Image 1">
+          <img src="WhatsApp%20Image%202025-06-09%20at%208.56.40%20AM.jpeg" alt="Supporting Image 2">
+          <img src="WhatsApp%20Image%202025-06-09%20at%208.56.41%20AM.jpeg" alt="Supporting Image 3">
+          <img src="WhatsApp%20Image%202025-06-09%20at%208.56.42%20AM.jpeg" alt="Supporting Image 4">
+          <img src="WhatsApp%20Image%202025-06-09%20at%208.56.43%20AM.jpeg" alt="Supporting Image 5">
+          <img src="WhatsApp%20Image%202025-06-09%20at%208.56.44%20AM.jpeg" alt="Supporting Image 6">
+          <img src="WhatsApp%20Image%202025-06-09%20at%208.56.45%20AM.jpeg" alt="Supporting Image 7">
+        </div>
+      </div>
+      <div class="footer">
+        This transaction complies with all applicable U.S. and international anti-money laundering regulations. A confirmation copy has been securely archived.
+      </div>
     </div>
   </div>
+
+  <script>
+    // Show loader for 4 seconds, then show the main content
+    setTimeout(function() {
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    }, 4000); // Change 4000 to 3000 or 5000 for 3 or 5 seconds
+  </script>
 </body>
 </html>
